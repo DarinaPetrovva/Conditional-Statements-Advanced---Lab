@@ -1,0 +1,17 @@
+namespace InvalidNumber
+{
+    using System;
+ 
+    class InvalidNumber
+    {
+        static void Main()
+        {
+            var num = int.Parse(Console.ReadLine());
+            var inRange = (num >= 100 && num <= 200) || num == 0;
+            if (!inRange)
+            {
+                Console.WriteLine("invalid");
+            }
+        }
+    }
+}
