@@ -1,0 +1,70 @@
+using System;
+
+namespace Ski_trip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int day_stay = int.Parse(Console.ReadLine());
+            string type_room = Console.ReadLine();
+            string assessment = Console.ReadLine();
+            day_stay = day_stay - 1;
+
+            double finalPrice = 0;
+
+            switch (type_room)
+            {
+                case "room for one person":
+                    {
+                        finalPrice = day_stay * 18;
+                    }
+                    break;
+                case "apartment":
+                    {
+                        if (day_stay >= 0 && day_stay < 10)
+                        {
+                            finalPrice = day_stay * 25 * .7;
+                        }
+                        if (day_stay >= 10 && day_stay <= 15)
+                        {
+                            finalPrice = day_stay * 25 * .65;
+                        }
+                        if (day_stay > 15)
+                        {
+                            finalPrice = day_stay * 25 * .5;
+                        }
+                    }
+                    break;
+                case "president apartment":
+                    {
+                        if (day_stay >= 0 && day_stay < 10)
+                        {
+                            finalPrice = day_stay * 35 * .9;
+                        }
+                        if (day_stay >= 10 && day_stay <= 15)
+                        {
+                            finalPrice = day_stay * 35 * .85;
+                        }
+                        if (day_stay > 15)
+                        {
+                            finalPrice = day_stay * 35 * .8;
+                        }
+                    }
+                    break;
+            }
+
+
+            if (assessment == "positive")
+            {
+                finalPrice = finalPrice * 1.25;
+                Console.WriteLine($"{finalPrice:f2}");
+            }
+            else if (assessment == "negative")
+            {
+                finalPrice = finalPrice * .9;
+                Console.WriteLine($"{finalPrice:f2}");
+            }
+        }
+    }
+}
