@@ -1,0 +1,18 @@
+using System;
+
+namespace zad9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           double age = double.Parse(Console.ReadLine());
+            string p = Console.ReadLine();
+            if (age >= 16 && p == "m") Console.WriteLine("Mr.");
+            if (age < 16 && p == "m") Console.WriteLine("Master");
+            if (age >= 16 && p == "f") Console.WriteLine("Ms.");
+            if (age < 16 && p=="f") Console.WriteLine("Miss");
+;
+        }
+    }
+}
