@@ -1,0 +1,28 @@
+using System;
+
+namespace zad9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int d = int.Parse(Console.ReadLine());
+            if (d > 0 && d <= 7)
+            {
+                if (d == 1) Console.WriteLine("Monday");
+                if (d == 2) Console.WriteLine("Tuesday");
+                if (d == 3) Console.WriteLine("Wednesday");
+                if (d == 4) Console.WriteLine("Thursday");
+                if (d == 5) Console.WriteLine("Friday");
+                if (d == 6) Console.WriteLine("Saturday");
+                if (d == 7) Console.WriteLine("Sunday");
+            }
+
+            else Console.WriteLine("Error");
+            
+                
+            
+
+        }
+    }
+}
